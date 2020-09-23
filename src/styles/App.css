@@ -1,0 +1,13 @@
+@import "./_resetCSS.css";
+@import "./assets/_fonts.css";
+@import "./assets/_colours.css";
+@import "./_background.css";
+
+
+
+body {
+  height: 100%;
+  overflow: auto;
+  background:var(--black);
+}
+

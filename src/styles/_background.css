@@ -1,0 +1,9 @@
+.background__image{
+    background-color: var(--black);
+    background-image:url('./assets/space-scrolling-background.jpg');
+    height: 6500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

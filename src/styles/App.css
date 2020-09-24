@@ -8,6 +8,6 @@
 body {
   height: 100%;
   overflow: auto;
-  background:var(--black);
+  background:var(--grey);
 }
 

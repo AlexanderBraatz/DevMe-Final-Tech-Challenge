@@ -1,74 +1,94 @@
 import React, { useState } from "react";
-
+import { HuePicker  } from 'react-color'; //http://casesandberg.github.io/react-color/
+import Button from '../Button'
 
 const PlayerTag = ({edit}) => {
 
     const [name, setName] = useState("");
-    const [colour, setColour] = useState("");
+    const [colour, setColour] = useState("#FF0000");
     const [picker, setPicker] = useState(false);
 
     const handleChangeName = (e) => setName(e.currentTarget.value);
     const handleClickColour = () => setPicker(!picker);
+    const handleChangeComplete  = (color) => setColour(color.hex);
 
+    const handleSave  = (e) => {
+        e.preventDefault();
+    }
+    const handleDelete  = (e) => {
+        e.preventDefault();
+    }
 
 return (
     <>
     <div className="playerTag__heading">
         Mario
     </div>
-    { !picker ? null :
+   
         <div className="playerTag__body">
-            <form>
-            <label 
-                className="playerTag__namelable" 
-                htmlFor="name"
-                >Name:
-            </label>
-            <input
-                className="playerTag__nameinput" 
-                id= "name"
-                name="edit"
-                type="text"
-
-                onChange={ handleChangeName }
-                value={ name }
-
-            />
-            <div 
-                className="playerTag__colourlable" 
-                htmlFor="colour"
-                >Colour:
+            <div className="playerTag__body--left">
+                alien
             </div>
-            <div
-                className="playerTag__colourinput" 
-                style={ {color: colour,  cursor: "pointer"} } 
+            <div className="playerTag__body--right">
+                <form className="playerTag__form">
+                    <div className="playerTag__formGroup">
+                        <label 
+                            className="playerTag__lable" 
+                            htmlFor="name"
+                            >Name:
+                        </label>
+                        <input
+                            className="playerTag__nameinput" 
+                            id= "name"
+                            name="edit"
+                            type="text"
 
-                onClick={ handleClickColour }
-                >
+                            onChange={ handleChangeName }
+                            value={ name }
 
+                        />
+                    </div>
+                    <div className="playerTag__formGroup">
+                        <div 
+                            className="playerTag__lable" 
+                            htmlFor="colour"
+                            >Colour:
+                        </div>
+                        <div
+                            className="playerTag__colourinput" 
+                            style={ { backgroundColor : colour }} 
+
+                            onClick={ handleClickColour }
+                            >
+
+                        </div>
+                        { !picker ? null :
+                            <HuePicker
+                                className="playerTag__colourPicker"
+                                color={ colour }
+                                onChangeComplete={ handleChangeComplete }
+                            /> 
+                        }
+                    </div>
+                    <div className="playerTag__buttons">
+                        <Button 
+                            name="Save"
+                            whenClick={ handleSave }
+                            colour="green"
+                            classNamePassed="playerTag__button"
+                        />
+                        <Button 
+                            name="Delete"
+                            whenClick={ handleDelete }
+                            colour="red" 
+                            classNamePassed="playerTag__button"
+                        />
+                    </div>
+
+                </form>
             </div>
-            </form>
         </div>
-    }
     </>
     );
 }
 export default PlayerTag;
-
-{/* <form>
-<label 
-    className="playerTag__body" 
-    htmlFor={ name } 
-    >{ lable }
-</label>
-<input
-    id={ name }
-    name={ name }
-
-    onChange={ handleChange }
-    value={ value }
-
-    className="form-control" 
-    type={ type }
-    />
-</form> */}

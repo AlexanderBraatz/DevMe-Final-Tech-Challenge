@@ -62,7 +62,7 @@
 .playerTag__lable{
     cursor: default;
     display: inline-block;
-    min-width: 5.5rem;
+    min-width: 3.5rem;
 }
 .playerTag__nameinput{
     width: 10rem;
@@ -92,9 +92,9 @@
 
 }
 
-.playerTag__colourPicker{
-    height: 2rem;
-}
+/* .playerTag__colourPicker{
+   display: ;
+} */
 
 .playerTag__buttons{
     display: flex;

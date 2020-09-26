@@ -1,7 +1,7 @@
 @import "./_resetCSS.css";
 
-/* @import "./_body.css"; */
 @import "./assets/_fonts.css";
+@import "./_body.css";
 @import "./assets/_colours.css";
 @import "./_background.css";
 @import "./_sideBar.css";

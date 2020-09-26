@@ -3,10 +3,12 @@ import Button from '../Button'
 import ColourPicker from '../ColourPicker'
 
 const PlayerTag = ({edit}) => {
-
+    
+    const [collapsed, setCollapsed] = useState(true);
     const [name, setName] = useState("");
     const [colour, setColour] = useState("#FF0000");
 
+    const handleCollapse = () => setCollapsed(!collapsed);
     const handleChangeName = (e) => setName(e.currentTarget.value);
     const handleChoiceComplete  = (choice) => setColour(choice);
 
@@ -19,10 +21,12 @@ const PlayerTag = ({edit}) => {
 
     return (
         <>
-        <div className="playerTag__heading">
+        <div 
+            onClick={handleCollapse}
+            className="playerTag__heading">
             Mario
         </div>
-    
+        {collapsed ? null :
             <div className="playerTag__body">
                 <div className="playerTag__body--left">
                     alien
@@ -69,6 +73,7 @@ const PlayerTag = ({edit}) => {
                     </form>
                 </div>
             </div>
+        }
         </>
     );
 }

@@ -5,10 +5,10 @@
     height: 100%;
     top: 0;
     right: 0;
-
+    /* width: 0rem; */
     background-color: white;
-    overflow: auto;
-    /* transition: 0.5s; */
+    overflow-y: scroll;
+    transition: 5.5s;
 
 }
 .sideBar__heading{
@@ -29,6 +29,7 @@
 .playerTag__heading{
 
     height: 3rem;
+    cursor: pointer;
     background-color: grey;
 }
 .playerTag__body{
@@ -36,6 +37,11 @@
     flex-direction: row;
     height: 12rem;
     background-color: pink;
+    transition: 0.2s;
+}
+
+.playerTag__body--active{
+    
 }
 
 
@@ -91,11 +97,11 @@
     border-color:vlack;
 }
 
-.playerTag__colourinput{
+/* .playerTag__colourinput{
     box-sizing: border-box;
     width : 2rem;
     height: 2rem;
-    cursor: "pointer";
+    cursor: pointer;
     display: inline-block;
 
     background-color: aqua;
@@ -103,7 +109,7 @@
     border-width: 0.2rem;
     border-color: (red, rgb(195, 195, 195));
 
-}
+} */
 
 /* .playerTag__colourPicker{
    display: ;

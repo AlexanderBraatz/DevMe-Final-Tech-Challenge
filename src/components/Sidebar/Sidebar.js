@@ -13,7 +13,6 @@ return (
         <PlayerTag />
         <PlayerTag />
         <PlayerTag />
-        sideBar
     </div>
     );
 }

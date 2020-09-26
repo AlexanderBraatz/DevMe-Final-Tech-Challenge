@@ -1,0 +1,45 @@
+.picker__container{
+    display: flex; 
+    flex-flow: row wrap;
+    margin: 0.2rem;
+}
+.picker__lable{
+    cursor: default;
+    display: inline-block;
+
+    background-color: peru;
+
+    display: flex; 
+    flex-direction: row 
+
+
+}
+.picker__lable p{
+    margin-top: 0.5rem;
+    background-color: lavender;
+    width: 6rem;
+    align-self: flex-end;
+
+    border-bottom: var(--black);
+    border-style: inset;
+}
+
+.square{
+    box-sizing: border-box;
+    width : 2rem;
+    height: 2rem;
+    cursor:pointer ;
+    display: inline-block;
+
+    background-color: aqua;
+    border-style: inset;
+    border-width: 0.2rem;
+}
+
+.picker__display{
+
+}
+
+.picker__choice{
+
+}

@@ -14,6 +14,7 @@
 .sideBar__heading{
     /* width: 100%; */
     height: 4rem;
+    text-shadow: 2px 2px 5px grey;
 
     background-color: red;
 }
@@ -54,15 +55,27 @@
     display: flex;
     flex-direction: column;
     padding: 0.2rem;
+    position: relative; /*so buttons can be positioned absolutly */
 }
 .playerTag__formGroup{
     margin: 0.2rem;
+    text-align: start;
+    background-color: peru;
+    display: flex; 
+    flex-direction: row 
+
 }
 
-.playerTag__lable{
+.playerTag__namelable{
     cursor: default;
     display: inline-block;
-    min-width: 3.5rem;
+    width: 6rem;
+    background-color: lavender;
+    align-self: flex-end;
+
+    border-bottom: var(--black);
+    border-style: inset;
+    
 }
 .playerTag__nameinput{
     width: 10rem;
@@ -74,8 +87,8 @@
     border-style: inset;
 
     display: inline-block;
-    border-width: 1px;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-width: 2px;
+    border-color:vlack;
 }
 
 .playerTag__colourinput{
@@ -97,16 +110,23 @@
 } */
 
 .playerTag__buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    height : 6rem;
+    margin: 0.2rem;
+    padding-left: 6rem;
+    background-color: plum;
+    position: absolute;
+    top: 9rem;
 
 }
 
-.playerTag__button{
-    align-self: flex-end;
+.playerTag__button--save{
+    /* align-self: flex-end; */
     height: 1.5rem;
-    width: 33.333%;
+    width: 6rem;
+    font-size: inherit;
+}
+.playerTag__button--delete{
+    /* align-self: flex-end; */
+    height: 1.5rem;
+    width: 4rem;
     font-size: inherit;
 }

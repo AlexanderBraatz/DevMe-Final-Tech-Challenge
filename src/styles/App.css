@@ -5,5 +5,6 @@
 @import "./assets/_colours.css";
 @import "./_background.css";
 @import "./_sideBar.css";
+@import "./_colourPicker.css";
 
 @import "./accessibility/_media-queries.css";

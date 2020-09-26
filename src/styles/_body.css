@@ -1,5 +1,6 @@
 body {
     background:var(--black);
     font-family: "Moonhouse",sans-serif;
+    height: 100%;
 
 }

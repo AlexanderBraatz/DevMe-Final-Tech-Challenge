@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import SideBar from "./SideBar"
 
-const mapStatetoProps = (props) => (props);
+const mapStatetoProps = ({players}) => ({players});
 
 
 export default connect(mapStatetoProps)(SideBar);

@@ -1,7 +1,7 @@
 import React from "react";
 import PlayerTag from "../PlayerTag"
 
-const SideBar = () => {
+const SideBar = ({players}) => {
 
 return (
     <div className="sideBar">
@@ -9,10 +9,15 @@ return (
             >Players</div>
         <div className="sideBar__button"
             >Add another Player</div>
-        <PlayerTag />
-        <PlayerTag />
-        <PlayerTag />
-        <PlayerTag />
+        { players.map((player)=>{
+            console.log(player);
+            return(
+                <PlayerTag player={player}/>
+
+            )
+            })
+        }
+
     </div>
     );
 }

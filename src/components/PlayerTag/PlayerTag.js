@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import Button from '../Button'
 import ColourPicker from '../ColourPicker'
 
-const PlayerTag = ({edit}) => {
-    
-    const [collapsed, setCollapsed] = useState(true);
-    const [name, setName] = useState("");
-    const [colour, setColour] = useState("#FF0000");
+const PlayerTag = ({player, save}) => {
 
-    const handleCollapse = () => setCollapsed(!collapsed);
+    // const [collapsed, setCollapsed] = useState(true);
+    const [name, setName] = useState("");
+    const [colour, setColour] = useState(player.champion ? "#D4AF37" : player.colour);
+
+    // const handleCollapse = () => setCollapsed(!collapsed);
     const handleChangeName = (e) => setName(e.currentTarget.value);
     const handleChoiceComplete  = (choice) => setColour(choice);
 
     const handleSave  = (e) => {
         e.preventDefault();
+        save(player.id, name, colour);
     }
     const handleDelete  = (e) => {
         e.preventDefault();
@@ -22,11 +23,11 @@ const PlayerTag = ({edit}) => {
     return (
         <>
         <div 
-            onClick={handleCollapse}
+            // onClick={handleCollapse}
             className="playerTag__heading">
-            Mario
+            {player.name}
         </div>
-        {collapsed ? null :
+        {!player.eddit ? null :
             <div className="playerTag__body">
                 <div className="playerTag__body--left">
                     alien

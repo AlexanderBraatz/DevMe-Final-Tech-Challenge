@@ -1,7 +1,9 @@
-export const setWordCard = (wordCard) => {
+export const savePlayer = (id, name, colour) => {
     return {
-        type:"SET_WC",
-        wordCard,
+        type:"SAVE_PLAYER",
+        id,
+        name,
+        colour,
     }
 }
 

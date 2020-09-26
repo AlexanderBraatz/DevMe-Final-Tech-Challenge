@@ -11,20 +11,23 @@ const initial = {
     {
       id :1, 
       name : "otto",
-      colour : "yellow", 
-      champion : false,
+      colour : "purple", 
+      champion : true,
+      eddit : true,
     },
     {
-      id :1, 
+      id :2, 
       name : "mario",
       colour : "red", 
       champion : false,
+      eddit : false,
     },
     {
-      id :1, 
+      id :3, 
       name : "luigy",
       colour : "green", 
       champion : false,
+      eddit : false,
     },
   ],
 

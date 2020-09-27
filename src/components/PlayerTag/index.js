@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import PlayerTag from "./PlayerTag"
-import {savePlayer, removePlayer} from "../../data/actions/state"
+import {savePlayer, removePlayer, switchEddit} from "../../data/actions/state"
 
 const mapStatetoProps = (state,{player}) => ({player});
 
@@ -9,7 +9,8 @@ const mapDispatchToProps = (dispatch) =>{
         save: (id, name, colour) => { 
             dispatch(savePlayer(id, name, colour));
         },
-        remove: (id)=> { dispatch(removePlayer(id))}
+        remove: (id)=> { dispatch(removePlayer(id))},
+        eddit: (id) => {dispatch(switchEddit(id))},
     }
         
 }

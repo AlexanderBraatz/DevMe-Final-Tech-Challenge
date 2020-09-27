@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from '../Button'
 import ColourPicker from '../ColourPicker'
 
-const PlayerTag = ({player, save, remove}) => {
+const PlayerTag = ({player, save, remove, eddit}) => {
 
     // const [collapsed, setCollapsed] = useState(true);
     const [name, setName] = useState("");
@@ -20,12 +20,16 @@ const PlayerTag = ({player, save, remove}) => {
         e.preventDefault();
         remove(player.id);
     }
+    const handleEddit = () => {
+        eddit(player.id)
+    }
 
     return (
         <>
         <div 
             // onClick={handleCollapse}
-            className="playerTag__heading">
+            className="playerTag__heading"
+            onClick={ handleEddit }>
             {player.name}
         </div>
         {!player.eddit ? null :

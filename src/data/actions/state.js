@@ -14,10 +14,10 @@ export const removePlayer = (id) => {
     }
 };
 
-export const setLikedWordList = (likedWordList) => {
+export const switchEddit = (id) => {
     return {
-        type: "SET_LWL",
-        likedWordList,
+        type: "SWITCH_EDDIT",
+        id,
     }
 };
 

@@ -9,10 +9,9 @@ return (
             >Players</div>
         <div className="sideBar__button"
             >Add another Player</div>
-        { players.map((player)=>{
-            console.log(player);
+        { players.map((player,i)=>{
             return(
-                <PlayerTag player={player}/>
+                <PlayerTag key={ i } player={player}/>
 
             )
             })

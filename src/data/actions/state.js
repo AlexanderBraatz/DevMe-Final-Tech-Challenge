@@ -7,10 +7,10 @@ export const savePlayer = (id, name, colour) => {
     }
 }
 
-export const setWordList = (wordList) => {
+export const removePlayer = (id) => {
     return {
-        type: "SET_WL",
-        wordList,
+        type: "REMOVE__PLAYER",
+        id,
     }
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from '../Button'
 import ColourPicker from '../ColourPicker'
 
-const PlayerTag = ({player, save}) => {
+const PlayerTag = ({player, save, remove}) => {
 
     // const [collapsed, setCollapsed] = useState(true);
     const [name, setName] = useState("");
@@ -18,6 +18,7 @@ const PlayerTag = ({player, save}) => {
     }
     const handleDelete  = (e) => {
         e.preventDefault();
+        remove(player.id);
     }
 
     return (

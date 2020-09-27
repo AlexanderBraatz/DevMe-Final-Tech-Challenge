@@ -93,8 +93,13 @@
     border-style: inset;
 
     display: inline-block;
-    border-width: 2px;
+    border-width: 0.2rem;
     border-color:vlack;
+}
+.warn{
+    border-color: var(--red);
+    border-style: outset;
+    background-color: var(--pale-alarm);
 }
 
 /* .playerTag__colourinput{

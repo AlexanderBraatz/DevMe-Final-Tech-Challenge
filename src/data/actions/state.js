@@ -21,10 +21,9 @@ export const switchEddit = (id) => {
     }
 };
 
-export const resetLoading = (stateKey) => {
+export const addPlayer = () => {
     return {
-        type: "UPDATE_LIKE",
-        stateKey,
+        type: "ADD_PLAYER",
     }
 };
 

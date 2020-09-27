@@ -3,23 +3,23 @@ const initial = {
     '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
     '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',],
 
-  nuberOFPlayers : 4,
+  numberOfPlayers : 3,
   roundCounter : 1,
   // stateHistory : [ {previousstate}, {previousstate}],
 
   players:[
     {
       id :1, 
-      name : "otto",
-      colour : "purple", 
-      champion : true,
-      eddit : true,
+      name : "Player 1",
+      colour : "#FF6633", 
+      champion : false,
+      eddit : false,
     },
     {
       id :2, 
       name : "mario",
       colour : "red", 
-      champion : false,
+      champion : true,
       eddit : false,
     },
     {

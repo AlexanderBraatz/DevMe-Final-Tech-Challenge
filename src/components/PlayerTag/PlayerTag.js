@@ -7,14 +7,23 @@ const PlayerTag = ({player, save, remove, eddit}) => {
     // const [collapsed, setCollapsed] = useState(true);
     const [name, setName] = useState("");
     const [colour, setColour] = useState(player.champion ? "#D4AF37" : player.colour);
+    const [warning, setWarning] = useState(false);
 
     // const handleCollapse = () => setCollapsed(!collapsed);
     const handleChangeName = (e) => setName(e.currentTarget.value);
     const handleChoiceComplete  = (choice) => setColour(choice);
 
     const handleSave  = (e) => {
-        e.preventDefault();
-        save(player.id, name, colour);
+        if(name === ""){
+            e.preventDefault();
+            setWarning(true);
+        }else{
+            e.preventDefault();
+            save(player.id, name, colour);
+            setWarning(false);
+
+        }
+
     }
     const handleDelete  = (e) => {
         e.preventDefault();
@@ -29,7 +38,8 @@ const PlayerTag = ({player, save, remove, eddit}) => {
         <div 
             // onClick={handleCollapse}
             className="playerTag__heading"
-            onClick={ handleEddit }>
+            onClick={ handleEddit }
+            style={{backgroundColor : player.colour}}>
             {player.name}
         </div>
         {!player.eddit ? null :
@@ -46,13 +56,15 @@ const PlayerTag = ({player, save, remove, eddit}) => {
                                 >NAME :
                             </label>
                             <input
-                                className="playerTag__nameinput" 
+                                className={ `playerTag__nameinput ${warning? "warn": ""}`} 
                                 id= "name"
                                 name="edit"
                                 type="text"
+                                placeholder={player.name}
 
                                 onChange={ handleChangeName }
                                 value={ name }
+
 
                             />
                         </div>

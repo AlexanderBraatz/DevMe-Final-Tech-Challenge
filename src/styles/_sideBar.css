@@ -5,33 +5,94 @@
     height: 100%;
     top: 0;
     right: 0;
-    /* width: 0rem; */
-    background-color: white;
+
     overflow-y: scroll;
-    transition: 5.5s;
+    /* transition: 5.5s; */
+    background-color:var(--primary-2);
+
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: var(--black);
 
 }
 .sideBar__heading{
-    /* width: 100%; */
-    height: 4rem;
-    text-shadow: 2px 2px 5px grey;
 
-    background-color: red;
+    height: 4rem;
+    background-color:var(--primary);
+
+
+
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
 }
 
-.sideBar__button{
-    /* width: 100%; */
-    height: 1.2rem;
+.sideBar__heading--cotent{
+    text-shadow: 0.2rem -0.1rem 0.2rem var(--grey);
+    font-size: 2.5rem;
+    margin: 0.5rem;
+    border-bottom:  0.2rem solid var(--black);
+    
+}
 
-    background-color: green;
+.sideBar__addPLbutton{
+
+    height: 1.2rem;
+    cursor: pointer;
+    padding-left: 0.5rem;
+
+    background-color: var(--tertiary);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+
 }
 
 .playerTag__heading{
 
+    position: relative;
+
     height: 3rem;
     cursor: pointer;
-    background-color: grey;
+    background-color: var(--secondary-2);
+
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
 }
+.playerTag__heading:hover{
+
+    background-color: var(--secondary);
+}
+
+.playerTag__heading--content{
+    width: 10rem;
+    height: 1.5rem;
+    padding: 0.2rem 0.2rem 0.2rem 2.2rem;
+
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.5rem;  
+
+  
+    position: absolute;
+    top: 45%;
+    left: 50%;
+  
+    margin: -1rem 0 0 -12rem;
+    border: 0.2rem solid var(--black);
+    border-radius:1rem  40%;
+}
+
 .playerTag__body{
     display: flex;
     flex-direction: row;
@@ -48,12 +109,13 @@
 .playerTag__body--right{
     /* float: left; */
     width: 60%;
+    background-color: var(--primary);
 }
 
 .playerTag__body--left{
     /* float: right; */
     width: 40%;
-    background-color: aquamarine;
+    background-color: var(--primary-2);
 
 }
 
@@ -66,7 +128,7 @@
 .playerTag__formGroup{
     margin: 0.2rem;
     text-align: start;
-    background-color: peru;
+
     display: flex; 
     flex-direction: row 
 
@@ -76,11 +138,15 @@
     cursor: default;
     display: inline-block;
     width: 6rem;
-    background-color: lavender;
-    align-self: flex-end;
 
-    border-bottom: var(--black);
-    border-style: inset;
+    align-self: flex-end;
+    
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 0.2rem;
+
+    border-color: var(--primary);
+    border-bottom-color: var(--black);
     
 }
 .playerTag__nameinput{
@@ -90,16 +156,25 @@
     padding-left: 0.3rem;
     background-color: var(--white);
     color: var(--black);
-    border-style: inset;
+    /* display: inline-block; */
 
-    display: inline-block;
+    border-style: solid;
     border-width: 0.2rem;
-    border-color:vlack;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+.playerTag__nameinput:focus {
+    outline: none;
 }
 .warn{
-    border-color: var(--red);
-    border-style: outset;
+    border-style: solid;
     background-color: var(--pale-alarm);
+    border-color: var(--red);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+  
 }
 
 /* .playerTag__colourinput{
@@ -122,8 +197,8 @@
 
 .playerTag__buttons{
     margin: 0.2rem;
-    padding-left: 6rem;
-    background-color: plum;
+    padding-left: 4rem;
+
     position: absolute;
     top: 9rem;
 
@@ -131,13 +206,39 @@
 
 .playerTag__button--save{
     /* align-self: flex-end; */
+    color: var(--black);
+    font-family: "Moonhouse",sans-serif;
     height: 1.5rem;
     width: 6rem;
     font-size: inherit;
+
+
+    border: 0.2rem solid var(--black);
+    border-radius:1rem  0 0 40%;
 }
 .playerTag__button--delete{
     /* align-self: flex-end; */
+    color: var(--black);
+    font-family: "Moonhouse",sans-serif;
     height: 1.5rem;
-    width: 4rem;
+    width: 7rem;
     font-size: inherit;
+    border: 0.2rem solid var(--black);
+    border-radius: 0  40% 1rem 0;
+}
+
+.sideBar__fotter{
+    
+    height: 1.2rem;
+    cursor: pointer;
+    padding-left: 0.5rem;
+
+    background-color: var(--tertiary);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+
 }

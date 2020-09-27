@@ -24,7 +24,7 @@ const ColourPicker = ({colours,color,onChoiceComplete}) => {
                     className="picker__lable" 
 
                 >
-                    <p>COLOUR :</p>
+                    <p>Colour :</p>
                 </div>
                 <div 
                     className="square picker__display"

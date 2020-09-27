@@ -6,6 +6,8 @@ const initial = {
   numberOfPlayers : 3,
   roundCounter : 1,
   // stateHistory : [ {previousstate}, {previousstate}],
+  
+  //players have an id property to allow for reliable match making. If the index was used deleting a player during a match would shift the index of all following players, breaking the match making. 
 
   players:[
     {

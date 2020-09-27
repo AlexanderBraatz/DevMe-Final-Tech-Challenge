@@ -1,9 +1,15 @@
 :root {
     --black: #0c0c0c;
-    --grey: #808080;
-    --white: #FFFFFF;
+    --grey: #a9a9a9;
+    --white: #fbeee4 ;
     --red: #f44336;
     --green: #00d084;
     --pale-alarm:#ffdddd;
+
+    --primary:#aa22cc;
+    --primary-2:#dd66ff;
+    --secondary:#33ee22;
+    --secondary-2:#11aa00 ;
+    --tertiary  :	#ee9944; 
 }
     

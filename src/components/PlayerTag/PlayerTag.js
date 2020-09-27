@@ -14,7 +14,7 @@ const PlayerTag = ({player, save, remove, eddit}) => {
     const handleChoiceComplete  = (choice) => setColour(choice);
 
     const handleSave  = (e) => {
-        if(name === ""){
+        if(name.length === 0 || name.length > 10){
             e.preventDefault();
             setWarning(true);
         }else{
@@ -39,8 +39,13 @@ const PlayerTag = ({player, save, remove, eddit}) => {
             // onClick={handleCollapse}
             className="playerTag__heading"
             onClick={ handleEddit }
-            style={{backgroundColor : player.colour}}>
-            {player.name}
+            >
+                <p
+                    className="playerTag__heading--content"
+                    style={{backgroundColor : player.colour}}
+                    >
+                        {player.name}
+                    </p>
         </div>
         {!player.eddit ? null :
             <div className="playerTag__body">
@@ -75,13 +80,13 @@ const PlayerTag = ({player, save, remove, eddit}) => {
 
                         <div className="playerTag__buttons">
                             <Button 
-                                name="Save"
+                                name="SAVE"
                                 whenClick={ handleSave }
                                 colour="green"
                                 classNamePassed="playerTag__button--save"
                             />
                             <Button 
-                                name="Delete"
+                                name="DELETE"
                                 whenClick={ handleDelete }
                                 colour="red" 
                                 classNamePassed="playerTag__button--delete"

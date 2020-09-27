@@ -2,26 +2,29 @@
     display: flex; 
     flex-flow: row wrap;
     margin: 0.2rem;
+    
 }
 .picker__lable{
     cursor: default;
     display: inline-block;
 
-    background-color: peru;
 
     display: flex; 
-    flex-direction: row 
+    flex-direction: row ;
 
 
 }
 .picker__lable p{
     margin-top: 0.5rem;
-    background-color: lavender;
     width: 6rem;
     align-self: flex-end;
 
-    border-bottom: var(--black);
-    border-style: inset;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 0.2rem;
+
+    border-color: var(--primary);
+    border-bottom-color: var(--black);
 }
 
 .square{
@@ -34,6 +37,16 @@
     background-color: aqua;
     border-style: inset;
     border-width: 0.2rem;
+
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+.square:hover{
+    border-width: 0.3rem;
 }
 
 .picker__display{

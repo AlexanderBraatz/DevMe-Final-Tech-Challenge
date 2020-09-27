@@ -27,9 +27,8 @@ export const addPlayer = () => {
     }
 };
 
-export const updateLike = (term) => {
+export const swichMenue = () => {
     return {
-        type: "UPDATE_LIKE",
-        term,
+        type: "SWITCH_MENUE",
     }
 };

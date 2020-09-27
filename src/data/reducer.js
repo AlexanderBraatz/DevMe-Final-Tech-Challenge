@@ -1,5 +1,6 @@
 const reducer = (state, action) => { 
 	switch(action.type){
+		case "SWITCH_MENUE" : return switchMenue(state);
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);
 		case "REMOVE__PLAYER" : return setNumberOfPlayers(removePlayer(state, action));
@@ -8,7 +9,17 @@ const reducer = (state, action) => {
 	}
 }
 
-//reducer business logic
+
+
+const switchMenue = (state) => {
+	
+	const {sideBarView} = state;
+
+	return({
+		...state,
+		sideBarView: !sideBarView,
+	})
+}
 
 const setNumberOfPlayers = (state) =>{
 

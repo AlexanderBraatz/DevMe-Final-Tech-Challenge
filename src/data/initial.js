@@ -46,7 +46,7 @@ const initial = {
 
 
 welcomeView : true,
-sideBarView : false,
+sideBarView : true,
 matchView : true,
 resultsView : false,
 

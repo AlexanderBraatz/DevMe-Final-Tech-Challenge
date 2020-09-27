@@ -1,0 +1,38 @@
+.menueOpener{
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+
+    position: fixed;
+    width:3rem;
+    height: 4.2rem;
+    top: 0;
+    right: 0rem;
+    background-color:var(--primary);
+
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: var(--black);
+    border-radius: 1rem 0 0 40% ;
+    
+    cursor: pointer;
+    
+}
+.menueOpener div{
+position : relative ;
+    
+}
+.menueOpener__content{
+    text-align: left;
+    vertical-align: middle;
+    line-height: 4.2rem;
+    font-size: 2rem;
+
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    cursor: pointer;
+    text-shadow: 0.2rem -0.05rem 0.2rem var(--grey);
+}
+.moveOpener{
+    right: 30.2rem;
+}

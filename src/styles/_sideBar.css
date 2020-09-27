@@ -4,24 +4,22 @@
     width: 30rem;
     height: 100%;
     top: 0;
-    right: 0;
-
+    right: -30.2rem;
     overflow-y: scroll;
-    /* transition: 5.5s; */
+    transition: 0.5s;
+    transition-timing-function: ease-out;
     background-color:var(--primary-2);
-
     border-style: solid;
     border-width: 0.1rem;
     border-color: var(--black);
-
+}
+.showSidebar{
+    right: 0rem;
 }
 .sideBar__heading{
 
     height: 4rem;
     background-color:var(--primary);
-
-
-
     border-style: solid;
     border-width: 0.2rem;
     border-top-color: var(--primary-2);
@@ -31,11 +29,11 @@
 }
 
 .sideBar__heading--cotent{
+
     text-shadow: 0.2rem -0.1rem 0.2rem var(--grey);
     font-size: 2.5rem;
     margin: 0.5rem;
     border-bottom:  0.2rem solid var(--black);
-    
 }
 
 .sideBar__addPLbutton{
@@ -43,7 +41,6 @@
     height: 1.2rem;
     cursor: pointer;
     padding-left: 0.5rem;
-
     background-color: var(--tertiary);
     border-style: solid;
     border-width: 0.2rem;
@@ -51,17 +48,14 @@
     border-left-color: var(--primary-2);
     border-right-color: var(--black);
     border-bottom-color: var(--black);
-
 }
 
 .playerTag__heading{
 
     position: relative;
-
     height: 3rem;
     cursor: pointer;
     background-color: var(--secondary-2);
-
     border-style: solid;
     border-width: 0.2rem;
     border-top-color: var(--primary-2);
@@ -69,31 +63,30 @@
     border-right-color: var(--black);
     border-bottom-color: var(--black);
 }
+
 .playerTag__heading:hover{
 
     background-color: var(--secondary);
 }
 
 .playerTag__heading--content{
+
     width: 10rem;
     height: 1.5rem;
     padding: 0.2rem 0.2rem 0.2rem 2.2rem;
-
     text-align: left;
     vertical-align: middle;
     line-height: 1.5rem;  
-
-  
     position: absolute;
     top: 45%;
     left: 50%;
-  
     margin: -1rem 0 0 -12rem;
     border: 0.2rem solid var(--black);
     border-radius:1rem  40%;
 }
 
 .playerTag__body{
+
     display: flex;
     flex-direction: row;
     height: 12rem;
@@ -101,63 +94,54 @@
     transition: 0.2s;
 }
 
-.playerTag__body--active{
-    
-}
-
-
 .playerTag__body--right{
-    /* float: left; */
+
     width: 60%;
     background-color: var(--primary);
 }
 
 .playerTag__body--left{
-    /* float: right; */
+    
     width: 40%;
     background-color: var(--primary-2);
-
 }
 
 .playerTag__form{
+
     display: flex;
     flex-direction: column;
     padding: 0.2rem;
-    position: relative; /*so buttons can be positioned absolutly */
+    position: relative;
 }
 .playerTag__formGroup{
+
     margin: 0.2rem;
     text-align: start;
-
     display: flex; 
     flex-direction: row 
-
 }
 
 .playerTag__namelable{
+
     cursor: default;
     display: inline-block;
     width: 6rem;
-
     align-self: flex-end;
-    
     border-style: solid;
     box-sizing: border-box;
     border-width: 0.2rem;
-
     border-color: var(--primary);
     border-bottom-color: var(--black);
-    
 }
+
 .playerTag__nameinput{
+
     width: 10rem;
     height: 2rem;
     box-sizing: border-box;
     padding-left: 0.3rem;
     background-color: var(--white);
     color: var(--black);
-    /* display: inline-block; */
-
     border-style: solid;
     border-width: 0.2rem;
     border-top-color: var(--primary-2);
@@ -165,59 +149,43 @@
     border-right-color: var(--black);
     border-bottom-color: var(--black);
 }
+
 .playerTag__nameinput:focus {
+
     outline: none;
 }
+
 .warn{
+
     border-style: solid;
     background-color: var(--pale-alarm);
     border-color: var(--red);
     border-right-color: var(--black);
     border-bottom-color: var(--black);
-  
+
 }
 
-/* .playerTag__colourinput{
-    box-sizing: border-box;
-    width : 2rem;
-    height: 2rem;
-    cursor: pointer;
-    display: inline-block;
-
-    background-color: aqua;
-    border-style: inset;
-    border-width: 0.2rem;
-    border-color: (red, rgb(195, 195, 195));
-
-} */
-
-/* .playerTag__colourPicker{
-   display: ;
-} */
-
 .playerTag__buttons{
+
     margin: 0.2rem;
     padding-left: 4rem;
-
     position: absolute;
     top: 9rem;
-
 }
 
 .playerTag__button--save{
-    /* align-self: flex-end; */
+
     color: var(--black);
     font-family: "Moonhouse",sans-serif;
     height: 1.5rem;
     width: 6rem;
     font-size: inherit;
-
-
     border: 0.2rem solid var(--black);
     border-radius:1rem  0 0 40%;
 }
+
 .playerTag__button--delete{
-    /* align-self: flex-end; */
+
     color: var(--black);
     font-family: "Moonhouse",sans-serif;
     height: 1.5rem;
@@ -232,7 +200,6 @@
     height: 1.2rem;
     cursor: pointer;
     padding-left: 0.5rem;
-
     background-color: var(--tertiary);
     border-style: solid;
     border-width: 0.2rem;
@@ -240,5 +207,4 @@
     border-left-color: var(--primary-2);
     border-right-color: var(--black);
     border-bottom-color: var(--black);
-
 }

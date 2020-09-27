@@ -1,10 +1,12 @@
 import React from "react";
 import PlayerTag from "../PlayerTag"
 
-const SideBar = ({players,addP}) => {
+const SideBar = ({players, sideBarView, addP}) => {
 
 return (
-    <div className="sideBar">
+    <div 
+        className={`sideBar ${sideBarView ? "showSidebar": ""}`}
+        >
         <div className="sideBar__heading">
             <h2
                 className="sideBar__heading--cotent"
@@ -23,7 +25,10 @@ return (
         }
         <div 
             className="sideBar__fotter"
-            >ALEXANDER BRAATZ - <a href="https://github.com/AlexanderBraatz/DevMe-Final-Tech-Challenge">Github.com</a></div>
+            >ALEXANDER BRAATZ - <a 
+                href="https://github.com/AlexanderBraatz/DevMe-Final-Tech-Challenge" 
+                target="_blank" 
+                rel="noopener noreferrer">Github.com</a></div>
 
     </div>
     );

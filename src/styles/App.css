@@ -7,5 +7,6 @@
 @import "./_menueOpener.css";
 @import "./_sideBar.css";
 @import "./_colourPicker.css";
+@import "./_start.css";
 
 @import "./accessibility/_media-queries.css";

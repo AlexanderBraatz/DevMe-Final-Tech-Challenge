@@ -1,5 +1,9 @@
+import {setUpMatches} from "./business"
+
+
 const reducer = (state, action) => { 
 	switch(action.type){
+		case "START" : return setUpMatches(startGame(state));
 		case "SWITCH_MENUE" : return switchMenue(state);
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);
@@ -11,6 +15,15 @@ const reducer = (state, action) => {
 
 
 
+const startGame = (state) => {
+
+	return({
+		...state,
+		startView: false,
+		matchView: true,
+
+	})
+}
 const switchMenue = (state) => {
 	
 	const {sideBarView} = state;

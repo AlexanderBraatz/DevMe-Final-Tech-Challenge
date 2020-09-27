@@ -1,0 +1,17 @@
+[33mee5cfe6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: commit: Add action and component for opening and closing the sidebar
+[33me97a770[m HEAD@{1}: commit: Add Styling improvments to Sidebar
+[33m177a6d9[m HEAD@{2}: commit: Add action addPlayer and eddit name input check
+[33m12ae0d3[m HEAD@{3}: commit: Add action Switching between eddit views
+[33mf21a3e1[m HEAD@{4}: commit: Add actions Save and Delete Player
+[33m416569e[m HEAD@{5}: commit: Enable Redux Dev Tools
+[33m4c6dd5b[m HEAD@{6}: commit: Add component ColourPicker my colour picker
+[33ma48b546[m HEAD@{7}: commit: Remove library react-color a Colour Picker
+[33mb4c5780[m HEAD@{8}: commit: Add font Moonhouse
+[33m82ae003[m HEAD@{9}: commit: Set basic layout of the SideBar
+[33mdeff613[m HEAD@{10}: commit: Add library react-color a Colour Picker
+[33mc7c760d[m HEAD@{11}: commit: Set up architecture Redux store
+[33m8f57b41[m HEAD@{12}: commit: Add library redux
+[33m3904faa[m HEAD@{13}: commit: Add library react-redux
+[33m2fd2e92[m HEAD@{14}: commit: Add absolute background image
+[33me8f06e8[m HEAD@{15}: commit: Add css reset
+[33m0e27e5e[m HEAD@{16}: commit (initial): Initialize project using Create React App

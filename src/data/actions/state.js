@@ -32,3 +32,10 @@ export const swichMenue = () => {
         type: "SWITCH_MENUE",
     }
 };
+
+export const startGame = () => {
+    return {
+        type: "START",
+    }
+};
+

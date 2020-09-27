@@ -34,19 +34,19 @@ const initial = {
   ],
 
   matches:[
-    {
-      playing : [ 0, 1],
-      complete : false 
-    },
-    {
-      playing : [ 2, 3],
-      complete : false 
-    },
+    // {
+    //   playing : [ 0, 1],
+    //   winner : "" 
+    // },
+    // {
+    //   playing : [ 2, 3],
+    //   complete : false 
+    // },
   ],
 
 
-welcomeView : true,
-sideBarView : true,
+startView : true,
+sideBarView : false,
 matchView : true,
 resultsView : false,
 

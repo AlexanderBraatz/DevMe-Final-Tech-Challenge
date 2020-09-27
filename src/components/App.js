@@ -14,8 +14,8 @@ function App() {
       <SideBar />
       <MenueOpener />
       <Start />
-      {/* <Match />
-      <End /> */}
+      {/* <Match /> */}
+      {/* <End /> */}
     </>
   );
 }

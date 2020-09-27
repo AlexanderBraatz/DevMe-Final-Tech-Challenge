@@ -3,7 +3,7 @@ const initial = {
     '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
     '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',],
 
-  numberOfPlayers : 3,
+  numberOfPlayers : 1,
   roundCounter : 1,
   // stateHistory : [ {previousstate}, {previousstate}],
   
@@ -17,20 +17,7 @@ const initial = {
       champion : false,
       eddit : false,
     },
-    {
-      id :2, 
-      name : "mario",
-      colour : "red", 
-      champion : true,
-      eddit : false,
-    },
-    {
-      id :3, 
-      name : "luigy",
-      colour : "green", 
-      champion : false,
-      eddit : false,
-    },
+    
   ],
 
   matches:[
@@ -40,7 +27,7 @@ const initial = {
     // },
     // {
     //   playing : [ 2, 3],
-    //   complete : false 
+    //   winner : false 
     // },
   ],
 

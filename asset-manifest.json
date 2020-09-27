@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/DevMe-Final-Tech-Challenge/static/css/main.551423fd.chunk.css",
+    "main.js": "/DevMe-Final-Tech-Challenge/static/js/main.06695a06.chunk.js",
+    "main.js.map": "/DevMe-Final-Tech-Challenge/static/js/main.06695a06.chunk.js.map",
+    "runtime-main.js": "/DevMe-Final-Tech-Challenge/static/js/runtime-main.8e00fc77.js",
+    "runtime-main.js.map": "/DevMe-Final-Tech-Challenge/static/js/runtime-main.8e00fc77.js.map",
+    "static/js/2.c27d3416.chunk.js": "/DevMe-Final-Tech-Challenge/static/js/2.c27d3416.chunk.js",
+    "static/js/2.c27d3416.chunk.js.map": "/DevMe-Final-Tech-Challenge/static/js/2.c27d3416.chunk.js.map",
+    "index.html": "/DevMe-Final-Tech-Challenge/index.html",
+    "precache-manifest.fba3b799451c3735b332c8db4fd3d668.js": "/DevMe-Final-Tech-Challenge/precache-manifest.fba3b799451c3735b332c8db4fd3d668.js",
+    "service-worker.js": "/DevMe-Final-Tech-Challenge/service-worker.js",
+    "static/css/main.551423fd.chunk.css.map": "/DevMe-Final-Tech-Challenge/static/css/main.551423fd.chunk.css.map",
+    "static/js/2.c27d3416.chunk.js.LICENSE.txt": "/DevMe-Final-Tech-Challenge/static/js/2.c27d3416.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/DevMe-Final-Tech-Challenge/static/media/Moonhouse-yE5M.48419a41.ttf",
+    "static/media/spaceScrollingBackground.jpg": "/DevMe-Final-Tech-Challenge/static/media/spaceScrollingBackground.0faf379a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e00fc77.js",
+    "static/js/2.c27d3416.chunk.js",
+    "static/css/main.551423fd.chunk.css",
+    "static/js/main.06695a06.chunk.js"
+  ]
+}

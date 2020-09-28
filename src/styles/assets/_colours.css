@@ -8,8 +8,9 @@
 
     --primary:#aa22cc;
     --primary-2:#dd66ff;
-    --secondary:#33ee22;
-    --secondary-2:#11aa00 ;
+    --secondary:#11aa00;
+    --secondary-pale:#14c700;
+    --secondary-2:#33ee22 ;
     --tertiary  :	#ee9944; 
+    --tertiary-2  :	#f7ba7e; 
 }
-    

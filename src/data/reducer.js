@@ -7,7 +7,7 @@ const reducer = (state, action) => {
 		case "SWITCH_MENUE" : return switchMenue(state);
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);
-		case "REMOVE__PLAYER" : return setNumberOfPlayers(removePlayer(state, action));
+		case "REMOVE__PLAYER" : return removePlayer(state, action);
 		case "ADD_PLAYER" : return setNumberOfPlayers(addPlayer(state));
 		default: return state;
 	}
@@ -36,12 +36,12 @@ const switchMenue = (state) => {
 
 const setNumberOfPlayers = (state) =>{
 
-	const {players} = state;
+	const {numberOfAddedPlayers} = state;
 
 
 	return({
 		...state,
-		numberOfPlayers : players.length,
+		numberOfAddedPlayers : Number(numberOfAddedPlayers) + 1,
 	});
 }
 
@@ -112,8 +112,8 @@ const removePlayer = (state,{id}) => {
 
 const addPlayer = (state)=>{
 
-	const {players, numberOfPlayers, colours} = state;
-	const  newID = numberOfPlayers + 1
+	const {players, numberOfAddedPlayers, colours} = state;
+	const  newID = Number(numberOfAddedPlayers) + 1
 
 	return({
 		...state,
@@ -122,7 +122,7 @@ const addPlayer = (state)=>{
 			{
 				id : newID, 
 				name : `Player ${newID}`,
-				colour : colours[newID], 
+				colour : colours[newID % colours.length ] , 
 				champion : false,
 				eddit : false,
 			},

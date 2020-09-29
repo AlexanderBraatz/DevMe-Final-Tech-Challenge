@@ -1,20 +1,21 @@
 import { connect } from "react-redux";
 import Match from "./Match"
-import {startGame} from "../../data/actions/state"
+import {nextMatch} from "../../data/actions/state"
 
-const mapStateToProps = ({ matches, matchView, matchPointer, players}) => (
+const mapStateToProps = ({ matches, matchView, matchPointer, players, roundCounter}) => (
     {
         matches,
         matchView, 
         matchPointer,
         players,
+        roundCounter,
     }
 );
 
 
 const mapDispatchToProps = (dispatch) =>{
     return{
-        start: () => dispatch(startGame()),
+        endMatch: (id) => dispatch(nextMatch(id)),
     }
         
 }

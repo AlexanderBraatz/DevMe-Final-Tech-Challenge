@@ -9,6 +9,7 @@ const reducer = (state, action) => {
 		case "SAVE_PLAYER" : return savePlayer(state, action);
 		case "REMOVE__PLAYER" : return removePlayer(state, action);
 		case "ADD_PLAYER" : return setNumberOfPlayers(addPlayer(state));
+		case "NEXT_MATCH" : return incrementMatchPointer(removeLoser(state,action));
 		default: return state;
 	}
 }
@@ -132,5 +133,45 @@ const addPlayer = (state)=>{
 	});
 }
 
+
+const removeLoser = (state, {id}) =>{
+
+	const {participants} = state;
+
+	let newParticipants = participants.reduce(
+		(acc,participantId)=> participantId === id
+		? acc 
+		:[...acc,participantId]
+	,[])
+	return({
+		...state,
+		"participants" : newParticipants,
+
+	});
+}
+
+const incrementMatchPointer = (state) =>{
+	
+	const {matchPointer, matches} = state ;
+	if(matches.length === matchPointer){
+		return({
+			...state,
+			matchPointer : 1,
+		})
+	}
+	
+	return({
+		...state,
+		matchPointer : matchPointer + 1,
+	})
+}
+
+const incrementRoundCounter = (state) => {
+	const {roundCounter} = state ;
+	return({
+		...state,
+		roundCounter : roundCounter + 1.
+	})
+}
 
 export default reducer ;

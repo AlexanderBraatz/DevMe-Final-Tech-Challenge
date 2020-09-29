@@ -1,13 +1,17 @@
 export const setUpMatches = (state) => {
-    
-     const newMatches = makeAllMatchUps(pickRoundParticipants(makeIdArrayFromPlayers(getPlayers(state))));
+    const {roundCounter,participants} = state;
 
+    const newParticipants = roundCounter > 1 ? participants : pickRoundParticipants(makeIdArrayFromPlayers(getPlayers(state)));
+
+    const newMatches = makeAllMatchUps(newParticipants);
 
     return({
-        ...state,
-        matches :newMatches
 
-    })
+        ...state,
+        matches :newMatches,
+        participants : newParticipants,
+
+    });
 }
 
 

@@ -39,3 +39,10 @@ export const startGame = () => {
     }
 };
 
+export const nextMatch = (id) => {
+    return {
+        type: "NEXT_MATCH",
+        id,
+    }
+};
+

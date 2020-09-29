@@ -2,7 +2,14 @@ import { connect } from "react-redux";
 import Match from "./Match"
 import {startGame} from "../../data/actions/state"
 
-const mapStateToProps = ({ matches}) => ({matches});
+const mapStateToProps = ({ matches, matchView, matchPointer, players}) => (
+    {
+        matches,
+        matchView, 
+        matchPointer,
+        players,
+    }
+);
 
 
 const mapDispatchToProps = (dispatch) =>{

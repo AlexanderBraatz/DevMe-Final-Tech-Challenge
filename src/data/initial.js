@@ -17,18 +17,33 @@ const initial = {
       champion : false,
       eddit : false,
     },
+    {
+      id :2, 
+      name : "Player 2",
+      colour : "#FF6633", 
+      champion : false,
+      eddit : false,
+    },
+    {
+      id :3, 
+      name : "Player 3",
+      colour : "#FF6633", 
+      champion : false,
+      eddit : false,
+    },
+    {
+      id :4, 
+      name : "Player 4",
+      colour : "#FF6633", 
+      champion : false,
+      eddit : false,
+    },
     
   ],
 
   matches:[
-    // {
-    //   playing : [ 0, 1],
-    //   winner : "" 
-    // },
-    // {
-    //   playing : [ 2, 3],
-    //   winner : false 
-    // },
+    [ 1, 2],
+    [ 3, 4],
   ],
 
 
@@ -37,6 +52,7 @@ sideBarView : false,
 matchView : true,
 resultsView : false,
 
+matchPointer : 1, 
 roundComplete : false,
 tournamentComplete : false,
 };

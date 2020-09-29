@@ -3,7 +3,7 @@ import React from "react";
 // import Button from '../Button'
 
 
-const Match = ({matches, matchView, matchPointer,players}) => {
+const Match = ({matches, matchPointer,players}) => {
 
     // const [winners, setWinners] = useState([])
     // const handleStart = () => start();
@@ -12,26 +12,15 @@ const Match = ({matches, matchView, matchPointer,players}) => {
     let player1ID = matches[matchPointer][0];
     let player2ID = matches[matchPointer][1];
 
-    const findPlayerfromID = (  id ) =>{
-        console.log(players);
-       return(
-            id === 0 ? {
-                id :0, 
-                name : "No Player",
-                colour : "#a6a6a6", 
-                champion : false,
-                eddit : false,
-            } :
-            players.find((player)=> player.id === id)
-        )   
-    };
+    const findPlayerfromID = ( id ) => players.find((player)=> player.id === id)
+
     let player1 = findPlayerfromID(player1ID);
     let player2 = findPlayerfromID(player2ID);
 
 
 
 
-    console.log(matchPointer, player2ID, player2)
+
     return(
         <>
         <p

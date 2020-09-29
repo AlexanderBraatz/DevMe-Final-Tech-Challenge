@@ -3,7 +3,7 @@ import {setUpMatches} from "./business"
 
 const reducer = (state, action) => { 
 	switch(action.type){
-		case "START" : return setUpMatches(startGame(state));
+		case "START" : return startGame(setUpMatches(state));
 		case "SWITCH_MENUE" : return switchMenue(state);
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);

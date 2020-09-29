@@ -2,6 +2,7 @@ export const setUpMatches = (state) => {
     
      const newMatches = makeAllMatchUps(pickRoundParticipants(makeIdArrayFromPlayers(getPlayers(state))));
 
+
     return({
         ...state,
         matches :newMatches
@@ -41,8 +42,9 @@ const makeAllMatchUps = (participantsIds) =>{
 const pickRoundParticipants = (playerIds) =>{
     
     const NumberOfPlayers = playerIds.length;
+    const power = findClosestPowerOfTwo(NumberOfPlayers)
 
-    let last = (NumberOfPlayers - findClosestPowerOfTwo(NumberOfPlayers))*2
+    let last = power === NumberOfPlayers ? NumberOfPlayers : (NumberOfPlayers - power)*2 ;
 
     let participantsIds = playerIds.slice(0,last)
     
@@ -53,8 +55,8 @@ const pickRoundParticipants = (playerIds) =>{
 
 const findClosestPowerOfTwo =(n) =>{
     let power = 2;
-    while(power < n){
-        power *= power ;
+    while(power*2 < n){
+        power *= 2 ;
     }  
     return(power);
 }

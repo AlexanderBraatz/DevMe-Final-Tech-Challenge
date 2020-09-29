@@ -2,7 +2,7 @@ import React from "react";
 import Button from '../Button'
 
 
-const Start = ({startView, start}) => {
+const Start = ({start}) => {
 
     const handleStart = () => start();
 
@@ -10,7 +10,6 @@ const Start = ({startView, start}) => {
 
     return(
         <>
-        {!startView ? null :
             <section 
                 className="start_container"
                 >
@@ -36,7 +35,6 @@ const Start = ({startView, start}) => {
                     />
                 </div>
             </section>
-        }
             
         </>
     )

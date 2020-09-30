@@ -9,7 +9,7 @@ export const savePlayer = (id, name, colour) => {
 
 export const removePlayer = (id) => {
     return {
-        type: "REMOVE__PLAYER",
+        type: "REMOVE_PLAYER",
         id,
     }
 };

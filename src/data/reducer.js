@@ -1,15 +1,15 @@
-import {setUpMatches} from "./business"
+import {setUpMatches, pickParticipantsAndWaiting, includeWaitingPlayers} from "./business"
 
 
 const reducer = (state, action) => { 
 	switch(action.type){
-		case "START" : return startGame(setUpMatches(state));
+		case "START" : return startGame(setUpMatches(pickParticipantsAndWaiting(state)));
 		case "SWITCH_MENUE" : return switchMenue(state);
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);
-		case "REMOVE__PLAYER" : return removePlayer(state, action);
+		case "REMOVE_PLAYER" : return removePlayer(state, action);
 		case "ADD_PLAYER" : return setNumberOfPlayers(addPlayer(state));
-		case "NEXT_MATCH" : return incrementMatchPointer(removeLoser(state,action));
+		case "NEXT_MATCH" : return incrementMatchPointer(startNextRoundConditionally(testGameEnd(removeLoser(state,action))));
 		default: return state;
 	}
 }
@@ -152,17 +152,18 @@ const removeLoser = (state, {id}) =>{
 
 const incrementMatchPointer = (state) =>{
 	
-	const {matchPointer, matches} = state ;
-	if(matches.length === matchPointer){
-		return({
-			...state,
-			matchPointer : 1,
-		})
-	}
-	
+	const {matchPointer} = state ;
+
 	return({
 		...state,
 		matchPointer : matchPointer + 1,
+	})
+}
+const resetMatchPointer = (state) =>{
+
+	return({
+		...state,
+		matchPointer :  -1,
 	})
 }
 
@@ -172,6 +173,33 @@ const incrementRoundCounter = (state) => {
 		...state,
 		roundCounter : roundCounter + 1.
 	})
+}
+
+const startNextRoundConditionally = (state) => {
+	const {matchPointer, matches} = state ;
+	let newState;
+
+	if(matches.length === matchPointer + 1){
+		newState = setUpMatches(includeWaitingPlayers(resetMatchPointer(incrementRoundCounter(state))));
+	}else{
+		newState = state;
+	}
+
+
+	return(newState);
+}
+
+const testGameEnd = (state) => {
+	const {participants, waiting} = state;
+	if(participants.length === 1 && waiting.length === 0){
+		return({
+			...state,
+			matchView : false,
+			resultsView : true,
+		}) 
+	} else {
+		return(state);
+	}
 }
 
 export default reducer ;

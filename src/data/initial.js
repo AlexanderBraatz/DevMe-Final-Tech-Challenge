@@ -10,15 +10,8 @@ const initial = {
 
   players:[
     {
-      id :1, 
-      name : "Player 1",
-      colour : "#FF6633", 
-      champion : false,
-      eddit : false,
-    },
-    {
-      id :2, 
-      name : "Player 2",
+      id :4, 
+      name : "Player 4",
       colour : "#FF6633", 
       champion : false,
       eddit : false,
@@ -31,8 +24,15 @@ const initial = {
       eddit : false,
     },
     {
-      id :4, 
-      name : "Player 4",
+      id :2, 
+      name : "Player 2",
+      colour : "#FF6633", 
+      champion : false,
+      eddit : false,
+    },
+    {
+      id :1, 
+      name : "Player 1",
       colour : "#FF6633", 
       champion : false,
       eddit : false,
@@ -44,7 +44,8 @@ const initial = {
     // [ 1, 2],
     // [ 3, 4],
   ],
-  participants : [] ,
+participants : [] ,
+waiting:[],
 
 
 startView : true,

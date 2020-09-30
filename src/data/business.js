@@ -1,18 +1,28 @@
 export const setUpMatches = (state) => {
-    const {roundCounter,participants} = state;
+    const { participants} = state;
 
-    const newParticipants = roundCounter > 1 ? participants : pickRoundParticipants(makeIdArrayFromPlayers(getPlayers(state)));
-
-    const newMatches = makeAllMatchUps(newParticipants);
-
+    
+    const newMatches = makeAllMatchUps(participants);
+    
     return({
-
+        
         ...state,
         matches :newMatches,
-        participants : newParticipants,
-
+        
     });
 }
+// export const setUpMatches = (state) => {
+//     const {roundCounter,participants} = state;
+    
+//     const newMatches = makeAllMatchUps(pickRoundParticipants(makeIdArrayFromPlayers(getPlayers(state))));
+
+
+//    return({
+//        ...state,
+//        matches :newMatches
+
+//    })
+// }
 
 
 
@@ -41,7 +51,37 @@ const makeAllMatchUps = (participantsIds) =>{
 }
 
 
-// pickRoundParticipants is done to reduce the number of players to a power of 2 after the first round, to avoid later rounds with an uneven  number of players and there for a number of players that cant be paird nicely.
+export const pickParticipantsAndWaiting = (state) =>{
+
+
+    let playerIds = makeIdArrayFromPlayers(getPlayers(state));
+    let newParticipants =  pickRoundParticipants(playerIds);
+
+    let newWaiting =  playerIds.reduce(
+        (acc,ID)=> newParticipants.includes(ID)
+            ? acc 
+            :[...acc, ID]
+        ,[]
+    );
+    console.log(playerIds, newParticipants, newWaiting);
+    return({
+        ...state,
+        participants : newParticipants,
+        waiting : newWaiting,
+    })
+}
+export const includeWaitingPlayers = (state) =>{
+
+    const {participants, waiting} = state;
+
+    return({
+        ...state,
+        participants: [...waiting, ...participants ],
+        waiting : [],
+    })
+}
+
+// pickRoundParticipants is done to reduce the number of players to a power of 2 after the first round, to avoid later rounds with an uneven  number of players and there for a number of players that cant be paird up nicely into matches.
 
 const pickRoundParticipants = (playerIds) =>{
     

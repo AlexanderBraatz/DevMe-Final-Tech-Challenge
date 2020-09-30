@@ -8,5 +8,6 @@
 @import "./_sideBar.css";
 @import "./_colourPicker.css";
 @import "./_start.css";
+@import "./_match.css";
 
 @import "./accessibility/_media-queries.css";

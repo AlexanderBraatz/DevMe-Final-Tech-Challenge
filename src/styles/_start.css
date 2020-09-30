@@ -1,9 +1,9 @@
 
 .start_container{
     margin: auto ;
-    width: 30rem;
+    width: 28rem;
     background-color: var(--tertiary);
-    padding: 1rem;
+    padding: 0.5rem;
     border-style: solid;
     border-width: 0.2rem;
     border-top-color: var(--tertiary-2);
@@ -13,7 +13,6 @@
 }
 
 .start__content{
-    background-color: var(--tertiary);
     padding: 0.5rem;
     background-color:var(--primary);
     border-style: solid;

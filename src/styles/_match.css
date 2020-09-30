@@ -1,0 +1,91 @@
+.match__container{
+    margin: auto ;
+    width: 28rem;
+    background-color: var(--tertiary);
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--tertiary-2);
+    border-left-color: var(--tertiary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+
+.match__content{
+    padding: 0.5rem;
+    background-color:var(--primary);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.match__player_name{
+    height: 3rem;
+    width: 43%;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+
+
+    background-color: var(--tertiary);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--tertiary-2);
+    border-left-color: var(--tertiary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+.match__player_name--content{
+    width: 6rem;
+    background-color: aliceblue;
+    margin: 0  auto;
+}
+
+.match__vs{
+    width: 14%;
+    display: inline-block;
+}
+
+.match__vs--content{
+    height: 1rem;
+    width: 2rem;
+    margin: auto auto ;
+    text-shadow: 0.2rem 0.1rem 0.2rem var(--grey);
+}
+
+
+.match__match_and_round{
+    height: 1.5rem;
+    background-color:var(--primary);
+    padding: 0 6rem;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+
+.match__match_and_round--content{
+    width: 50% ;
+    display: inline-block;
+
+    /* margin: 0.5rem; */
+    border-bottom:  0.2rem solid var(--black);
+}
+.match__confirm_button{
+    color: var(--black);
+    font-family: "Moonhouse",sans-serif;
+    height: 1.5rem;
+    width: 17rem;
+    font-size: inherit;
+    border: 0.2rem solid var(--black);
+    border-radius:1rem  40%;
+    margin: 0.5rem auto  ;
+}

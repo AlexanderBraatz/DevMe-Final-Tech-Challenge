@@ -14,7 +14,7 @@ const PlayerTag = ({player, save, remove, eddit}) => {
     const handleChoiceComplete  = (choice) => setColour(choice);
 
     const handleSave  = (e) => {
-        if(name.length === 0 || name.length > 10){
+        if(name.length === 0 || name.length > 8){
             e.preventDefault();
             setWarning(true);
         }else{

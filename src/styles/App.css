@@ -6,8 +6,10 @@
 @import "./_background.css";
 @import "./_menueOpener.css";
 @import "./_sideBar.css";
+@import "./_playerTag.css";
 @import "./_colourPicker.css";
 @import "./_start.css";
 @import "./_match.css";
+@import "./_button.css";
 
 @import "./accessibility/_media-queries.css";

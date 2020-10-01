@@ -1,0 +1,12 @@
+.myButton{
+    font-family: "Moonhouse",sans-serif;
+    color: var(--black);
+    border: 0.2rem solid var(--black);
+}
+
+
+
+
+.myButton:active{
+    transform: scale(1.05, 1.1)
+}

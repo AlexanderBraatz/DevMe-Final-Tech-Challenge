@@ -1,0 +1,138 @@
+.playerTag__heading{
+
+    position: relative;
+    height: 3rem;
+    cursor: pointer;
+    background-color: var(--secondary);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--secondary-2);
+    border-left-color: var(--secondary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+
+.playerTag__heading:hover{
+
+    background-color: var(--secondary-pale);
+}
+
+.playerTag__heading--content{
+
+    width: 10rem;
+    height: 1.5rem;
+    padding: 0.2rem 0.2rem 0.2rem 2.2rem;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.5rem;  
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: -1rem 0 0 -12rem;
+    border: 0.2rem solid var(--black);
+    border-radius:1rem  40%;
+}
+
+.playerTag__body{
+
+    display: flex;
+    flex-direction: row;
+    height: 12rem;
+    background-color: pink;
+    transition: 0.2s;
+}
+
+.playerTag__body--right{
+
+    width: 60%;
+    background-color: var(--primary);
+}
+
+.playerTag__body--left{
+    
+    width: 40%;
+    background-color: var(--primary-2);
+}
+
+.playerTag__form{
+
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem;
+    position: relative;
+}
+.playerTag__formGroup{
+
+    margin: 0.2rem;
+    text-align: start;
+    display: flex; 
+    flex-direction: row 
+}
+
+.playerTag__namelable{
+
+    cursor: default;
+    display: inline-block;
+    width: 6rem;
+    align-self: flex-end;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 0.2rem;
+    border-color: var(--primary);
+    border-bottom-color: var(--black);
+}
+
+.playerTag__nameinput{
+
+    width: 10rem;
+    height: 2rem;
+    box-sizing: border-box;
+    padding-left: 0.3rem;
+    background-color: var(--white);
+    color: var(--black);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-top-color: var(--primary-2);
+    border-left-color: var(--primary-2);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+}
+
+.playerTag__nameinput:focus {
+
+    outline: none;
+}
+
+.warn{
+
+    border-style: solid;
+    background-color: var(--pale-alarm);
+    border-color: var(--red);
+    border-right-color: var(--black);
+    border-bottom-color: var(--black);
+
+}
+
+.playerTag__buttons{
+
+    margin: 0.2rem;
+    padding-left: 4rem;
+    position: absolute;
+    top: 9rem;
+}
+
+.playerTag__button--save{
+
+    height: 1.5rem;
+    width: 6rem;
+    font-size: inherit;
+    border-radius:1rem  0 0 40%;
+}
+
+.playerTag__button--delete{
+
+    height: 1.5rem;
+    width: 7rem;
+    font-size: inherit;
+    border-radius: 0  40% 1rem 0;
+}

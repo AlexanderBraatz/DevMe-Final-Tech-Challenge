@@ -27,60 +27,69 @@ const Match = ({matches, matchPointer,players, roundCounter, endMatch}) => {
 
 
     return(
-        <>
         <section 
-            className="match__container">
+            className="match__frame">
             <div
-                className="match__content">
-                <div>
-                    <div
-                        className="match__player_name"
-                        onClick={ handleSelection2 }>
-                        <p
-                            className="match__player_name--content"
-                            >{player1.name}</p>
-                    </div>
-                    <div 
-                        className="match__vs">
-                        <p
-                            className="match__vs--content"
-                            >V.S.</p>
-                    </div>
-                    <div
-                        className="match__player_name"
-                        onClick={ handleSelection1 }>
-                        <p
-                            className="match__player_name--content"
-                            >{player2.name}</p>
-                    </div>
+                className="match__container">
+                <div
+                    className={`match__player_name--left 
+                    ${loser === player2.id 
+                        ? "match__player_name--selected"
+                        : ""}`}
+                    style={{backgroundColor:player1.colour}}
+                    onClick={ handleSelection2 }>
+                    <p
+                        className="match__player_name--content"
+                        >{player1.name}</p>
+                </div>
+                 <div 
+                    className="match__vs">
+                    <p
+                        className="match__vs--content"
+                        >V.S.</p>
+                </div>
+                <div
+                    className={`match__player_name--right 
+                    ${loser === player1.id 
+                        ? "match__player_name--selected"
+                        : ""}`}
+                    style={{backgroundColor:player2.colour}}
+                    onClick={ handleSelection1 }>
+                    <p
+                        className="match__player_name--content"
+                        >{player2.name}</p>
                 </div>
                 <div 
                     className="match__match_and_round">
+                </div>
+                    <div
+                    className="match__round--container">
                     <p 
-                        className="match__match_and_round--content"
-                        >Match : {matchPointer + 1}
-                    </p>
-                    <p 
-                        className="match__match_and_round--content"
+                        className="match__round--content"
                         >Round : {roundCounter}
                     </p>
                 </div>
-                <div>
-                    <Button 
-                        classNamePassed="match__confirm_button"
-                        name="Confirm + Next Match"
-                        whenClick={ handleConfirmation }
-                        colour= "red"
-                    />
-                    {!warning ? null :
-                        <div>
-                            <p>Please chose a winner first!</p>
-                        </div>
-                    }
+                <div
+                    className="match__match--container">
+                    <p 
+                        className="match__match--content"
+                        >Match : {matchPointer + 1}
+                    </p>
                 </div>
+                <Button 
+                    classNamePassed="match__confirm_button"
+                    name="Confirm + Next Match"
+                    whenClick={ handleConfirmation }
+                    colour= "red"
+                />
+                <div
+                    className="match__alert"
+                    style={warning ? {display: "flex" } : {display:"none"}}>
+                    <p>Please chose a winner first!</p>
+                </div>
+                
             </div>
         </section>
-        </>
     )
 }
 

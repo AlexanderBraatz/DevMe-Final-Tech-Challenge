@@ -46,3 +46,14 @@ export const nextMatch = (id) => {
     }
 };
 
+export const repeatTournamentwithChampion = () => {
+    return {
+        type: "REPEATE"
+    }
+}
+
+export const reset = () => {
+    return {
+        type: "RESET"
+    }
+}

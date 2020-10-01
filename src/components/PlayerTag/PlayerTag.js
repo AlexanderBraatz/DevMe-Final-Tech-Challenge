@@ -6,7 +6,7 @@ const PlayerTag = ({player, save, remove, eddit}) => {
 
     // const [collapsed, setCollapsed] = useState(true);
     const [name, setName] = useState("");
-    const [colour, setColour] = useState(player.champion ? "#D4AF37" : player.colour);
+    const [colour, setColour] = useState(player.colour);
     const [warning, setWarning] = useState(false);
 
     // const handleCollapse = () => setCollapsed(!collapsed);
@@ -42,7 +42,7 @@ const PlayerTag = ({player, save, remove, eddit}) => {
             >
                 <p
                     className="playerTag__heading--content"
-                    style={{backgroundColor : player.colour}}
+                    style={{backgroundColor : player.champion ? "#ffd700" : player.colour}}
                     >
                         {player.name}
                     </p>
@@ -50,7 +50,7 @@ const PlayerTag = ({player, save, remove, eddit}) => {
         {!player.eddit ? null :
             <div className="playerTag__body">
                 <div className="playerTag__body--left">
-                    alien
+                    
                 </div>
                 <div className="playerTag__body--right">
                     <form className="playerTag__form">

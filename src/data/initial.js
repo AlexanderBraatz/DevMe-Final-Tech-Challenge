@@ -40,10 +40,7 @@ const initial = {
     
   ],
 
-  matches:[
-    // [ 1, 2],
-    // [ 3, 4],
-  ],
+matches:[],
 participants : [] ,
 waiting:[],
 
@@ -51,13 +48,11 @@ waiting:[],
 startView : true,
 sideBarView : false,
 matchView : false,
-resultsView : false,
+endView : false,
 
 numberOfAddedPlayers : 4,
 roundCounter : 1,
 matchPointer : 0, 
-roundComplete : false,
-tournamentComplete : false,
 };
 
 export default initial;

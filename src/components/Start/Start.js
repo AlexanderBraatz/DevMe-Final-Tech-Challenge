@@ -11,7 +11,7 @@ const Start = ({start}) => {
     return(
         <>
             <section 
-                className="start_container"
+                className="start__container"
                 >
                 <div 
                     className="start__content"

@@ -36,7 +36,7 @@ const Match = ({matches, matchPointer,players, roundCounter, endMatch}) => {
                     ${loser === player2.id 
                         ? "match__player_name--selected"
                         : ""}`}
-                    style={{backgroundColor:player1.colour}}
+                    style={{backgroundColor:player1.champion ? "#ffd700" : player1.colour}}
                     onClick={ handleSelection2 }>
                     <p
                         className="match__player_name--content"
@@ -53,7 +53,7 @@ const Match = ({matches, matchPointer,players, roundCounter, endMatch}) => {
                     ${loser === player1.id 
                         ? "match__player_name--selected"
                         : ""}`}
-                    style={{backgroundColor:player2.colour}}
+                    style={{backgroundColor:player2.champion ? "#ffd700" : player2.colour}}
                     onClick={ handleSelection1 }>
                     <p
                         className="match__player_name--content"

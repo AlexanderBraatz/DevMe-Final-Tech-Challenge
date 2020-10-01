@@ -1,4 +1,5 @@
 import {setUpMatches, pickParticipantsAndWaiting, includeWaitingPlayers} from "./business"
+import initial from "./initial";
 
 
 const reducer = (state, action) => { 
@@ -10,6 +11,8 @@ const reducer = (state, action) => {
 		case "REMOVE_PLAYER" : return removePlayer(state, action);
 		case "ADD_PLAYER" : return setNumberOfPlayers(addPlayer(state));
 		case "NEXT_MATCH" : return incrementMatchPointer(startNextRoundConditionally(testGameEnd(removeLoser(state,action))));
+		case "REPEATE" : return repeatTournamentwithChampion(state);
+		case "RESET" : return reset(state);
 		default: return state;
 	}
 }
@@ -195,11 +198,55 @@ const testGameEnd = (state) => {
 		return({
 			...state,
 			matchView : false,
-			resultsView : true,
+			endView : true,
 		}) 
 	} else {
 		return(state);
 	}
 }
+
+const repeatTournamentwithChampion = (state) => {
+	const {participants, players} = state;
+	let winnerID = participants[0];
+	console.log(winnerID)
+	let newPlayers = players.map((player)=>{
+		return(
+			player.id === winnerID 
+			? { ...player, champion: true }
+			: {...player, champion: false }
+		);
+	});
+
+	return({
+		...initial,
+		numberOfAddedPlayers : 4,
+		players : newPlayers,
+
+	})
+}
+
+const reset = (state) => {
+
+	return({
+		...initial,
+	})
+}
+
+// const allocateChampionStyling = (state) => {
+// 	const {players} = state;
+
+// 	let newPlayers = players.map((player)=>{
+// 		return(
+// 			player.champion
+// 			? { ...player, colour: "#ffd700" }
+// 			: {...player }
+// 		);
+// 	});
+
+// 	return({
+// 		...state,
+// 		players : newPlayers,
+// 	})
+// }
 
 export default reducer ;

@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import App from "./App"
 
-const mapStateToProps = ({startView, matchView}) => (
+const mapStateToProps = ({startView, matchView, endView}) => (
     {
         startView, 
-        matchView, 
+        matchView,
+        endView,
     }
 );
 

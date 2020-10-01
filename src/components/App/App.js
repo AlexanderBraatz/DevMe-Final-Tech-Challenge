@@ -5,9 +5,9 @@ import SideBar from '../SideBar'
 import MenueOpener from '../MenueOpener'
 import Start from '../Start'
 import Match from '../Match'
-// import End from '../End'
+import End from '../End'
 
-const  App = ({startView, matchView}) => {
+const  App = ({startView, matchView, endView}) => {
   return (
     <>
       <Background />
@@ -15,7 +15,7 @@ const  App = ({startView, matchView}) => {
       <MenueOpener />
       { !startView ? null :<Start /> }
       { !matchView ? null : <Match /> }
-      {/* <End /> */}
+      { !endView ? null : <End /> }
     </>
   );
 }

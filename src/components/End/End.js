@@ -12,33 +12,33 @@ const End = ({winner, repeat, restert }) => {
     return(
         <>
             <section 
-                className="start__container"
+                className="end__container"
                 >
                 <div 
-                    className="start__content"
+                    className="end__content"
                     >
                     <div 
-                        className="start__heading"
+                        className="end__heading"
                         >
                         <h1 
-                            className="start__heading--content"
+                            className="end__heading--content"
                         >Extraterrestrial ...</h1>
 
                     </div>
                     <p 
-                        className="start__text"
-                        >otto was here!</p>
-                    <Button className="start__button"
+                        className="end__text"
+                        >{`${winner} has won the Tournament!`}</p>
+                    <Button className="end__button"
                         name="repeat"
                         whenClick={ handleRepeat }
                         colour="red" 
-                        classNamePassed="start__button"
+                        classNamePassed="end__button"
                     />
-                    <Button className="start__button"
+                    <Button className="end__button"
                         name="reset"
                         whenClick={ handleReset }
                         colour="red" 
-                        classNamePassed="start__button"
+                        classNamePassed="end__button"
                     />
                 </div>
             </section>

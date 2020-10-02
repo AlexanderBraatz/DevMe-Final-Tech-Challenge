@@ -9,34 +9,34 @@ const initial = {
   //players have an id property to allow for reliable match making. If the index was used deleting a player during a match would shift the index of all following players, breaking the match making. 
 
   players:[
-    {
-      id :4, 
-      name : "Player 4",
-      colour : "#FF6633", 
-      champion : false,
-      eddit : false,
-    },
-    {
-      id :3, 
-      name : "Player 3",
-      colour : "#FF6633", 
-      champion : false,
-      eddit : false,
-    },
-    {
-      id :2, 
-      name : "Player 2",
-      colour : "#FF6633", 
-      champion : true,
-      eddit : false,
-    },
-    {
-      id :1, 
-      name : "Player 1",
-      colour : "#FF6633", 
-      champion : false,
-      eddit : false,
-    },
+    // {
+    //   id :4, 
+    //   name : "Player 4",
+    //   colour : "#FF6633", 
+    //   champion : false,
+    //   eddit : false,
+    // },
+    // {
+    //   id :3, 
+    //   name : "Player 3",
+    //   colour : "#FF6633", 
+    //   champion : false,
+    //   eddit : false,
+    // },
+    // {
+    //   id :2, 
+    //   name : "Player 2",
+    //   colour : "#FF6633", 
+    //   champion : true,
+    //   eddit : false,
+    // },
+    // {
+    //   id :1, 
+    //   name : "Player 1",
+    //   colour : "#FF6633", 
+    //   champion : false,
+    //   eddit : false,
+    // },
     
   ],
 
@@ -50,7 +50,7 @@ sideBarView : false,
 matchView : false,
 endView : false,
 
-numberOfAddedPlayers : 4,
+numberOfAddedPlayers : 0,
 roundCounter : 1,
 matchPointer : 0, 
 };

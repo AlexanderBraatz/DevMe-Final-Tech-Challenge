@@ -4,12 +4,12 @@ import ColourPicker from '../ColourPicker'
 
 const PlayerTag = ({player, save, remove, eddit, allowPlayerDeletion}) => {
 
-    // const [collapsed, setCollapsed] = useState(true);
+
     const [name, setName] = useState("");
     const [colour, setColour] = useState(player.colour);
     const [warning, setWarning] = useState(false);
 
-    // const handleCollapse = () => setCollapsed(!collapsed);
+
     const handleChangeName = (e) => setName(e.currentTarget.value);
     const handleChoiceComplete  = (choice) => setColour(choice);
 

@@ -9,7 +9,7 @@ const reducer = (state, action) => {
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);
 		case "REMOVE_PLAYER" : return removePlayer(state, action);
-		case "ADD_PLAYER" : return setNumberOfPlayers(addPlayer(state));
+		case "ADD_PLAYER" : return addPlayer(setNumberOfPlayers(state));
 		case "NEXT_MATCH" : return incrementMatchPointer(startNextRoundConditionally(testGameEnd(removeLoser(state,action))));
 		case "REPEATE" : return repeatTournamentwithChampion(state);
 		case "RESET" : return reset(state);
@@ -54,7 +54,7 @@ const setNumberOfPlayers = (state) =>{
 
 	return({
 		...state,
-		numberOfAddedPlayers : Number(numberOfAddedPlayers) + 1,
+		numberOfAddedPlayers : numberOfAddedPlayers + 1,
 	});
 }
 
@@ -126,7 +126,7 @@ const removePlayer = (state,{id}) => {
 const addPlayer = (state)=>{
 
 	const {players, numberOfAddedPlayers, colours} = state;
-	const  newID = Number(numberOfAddedPlayers) + 1
+	const  newID = numberOfAddedPlayers
 
 	return({
 		...state,
@@ -135,7 +135,7 @@ const addPlayer = (state)=>{
 			{
 				id : newID, 
 				name : `Player ${newID}`,
-				colour : colours[newID % colours.length ] , 
+				colour : colours[(newID-1) % colours.length ] , 
 				champion : false,
 				eddit : false,
 			},

@@ -28,18 +28,21 @@ const End = ({winner, repeat, restert }) => {
                     <p 
                         className="end__text"
                         >{`${winner} has won the Tournament!`}</p>
-                    <Button className="end__button"
-                        name="repeat"
-                        whenClick={ handleRepeat }
-                        colour="red" 
-                        classNamePassed="end__button"
-                    />
-                    <Button className="end__button"
-                        name="reset"
-                        whenClick={ handleReset }
-                        colour="red" 
-                        classNamePassed="end__button"
-                    />
+                    <div 
+                        className="end_button--group">
+                        <Button
+                            name="Repeat"
+                            whenClick={ handleRepeat }
+                            colour="red" 
+                            classNamePassed="end__button"
+                        />
+                        <Button
+                            name="Reset"
+                            whenClick={ handleReset }
+                            colour="red" 
+                            classNamePassed="end__button"
+                        />
+                    </div>
                 </div>
             </section>
             

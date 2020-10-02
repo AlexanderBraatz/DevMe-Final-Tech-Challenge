@@ -27,7 +27,7 @@ const initial = {
       id :2, 
       name : "Player 2",
       colour : "#FF6633", 
-      champion : false,
+      champion : true,
       eddit : false,
     },
     {

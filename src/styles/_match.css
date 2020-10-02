@@ -68,6 +68,10 @@
     border-width: 0.2rem;
     margin: 0.15rem;
 }
+.champion{
+    box-shadow: 0 0 0.3rem 0.2rem var(--gold);
+    border-radius: 0.1rem;
+}
 
 .match__player_name--selected{
     

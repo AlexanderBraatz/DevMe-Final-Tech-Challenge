@@ -32,11 +32,14 @@ const Match = ({matches, matchPointer,players, roundCounter, endMatch}) => {
             <div
                 className="match__container">
                 <div
-                    className={`match__player_name--left 
-                    ${loser === player2.id 
-                        ? "match__player_name--selected"
-                        : ""}`}
-                    style={{backgroundColor:player1.champion ? "#ffd700" : player1.colour}}
+                    className={`match__player_name--left
+                        ${loser === player2.id 
+                            ? "match__player_name--selected"
+                            : ""} 
+                        ${player1.champion 
+                            ? "champion" 
+                            : ""}        
+                    `}
                     onClick={ handleSelection2 }>
                     <p
                         className="match__player_name--content"
@@ -50,10 +53,13 @@ const Match = ({matches, matchPointer,players, roundCounter, endMatch}) => {
                 </div>
                 <div
                     className={`match__player_name--right 
-                    ${loser === player1.id 
-                        ? "match__player_name--selected"
-                        : ""}`}
-                    style={{backgroundColor:player2.champion ? "#ffd700" : player2.colour}}
+                        ${loser === player1.id 
+                            ? "match__player_name--selected"
+                            : ""}
+                        ${player2.champion 
+                            ? "champion" 
+                            : ""}
+                    `}
                     onClick={ handleSelection1 }>
                     <p
                         className="match__player_name--content"

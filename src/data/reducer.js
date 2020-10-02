@@ -20,9 +20,9 @@ const reducer = (state, action) => {
 const conditionalyStartGame = (state) => {
 	const {players} = state
 	return(
-		players.length === 0 
-		? {...state, sideBarView : true,}
-		: startGame(setUpMatches(pickParticipantsAndWaiting(state)))
+		players.length > 1 
+		? startGame(setUpMatches(pickParticipantsAndWaiting(state)))
+		: {...state, sideBarView : true,}
 	)
 };
 
@@ -215,7 +215,7 @@ const testGameEnd = (state) => {
 }
 
 const repeatTournamentwithChampion = (state) => {
-	const {participants, players} = state;
+	const {participants, players, numberOfAddedPlayers} = state;
 	let winnerID = participants[0];
 	console.log(winnerID)
 	let newPlayers = players.map((player)=>{
@@ -228,7 +228,7 @@ const repeatTournamentwithChampion = (state) => {
 
 	return({
 		...initial,
-		numberOfAddedPlayers : 4,
+		numberOfAddedPlayers : numberOfAddedPlayers,
 		players : newPlayers,
 
 	})
@@ -240,22 +240,5 @@ const reset = (state) => {
 		...initial,
 	})
 }
-
-// const allocateChampionStyling = (state) => {
-// 	const {players} = state;
-
-// 	let newPlayers = players.map((player)=>{
-// 		return(
-// 			player.champion
-// 			? { ...player, colour: "#ffd700" }
-// 			: {...player }
-// 		);
-// 	});
-
-// 	return({
-// 		...state,
-// 		players : newPlayers,
-// 	})
-// }
 
 export default reducer ;

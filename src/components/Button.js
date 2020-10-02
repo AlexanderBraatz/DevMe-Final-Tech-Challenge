@@ -4,8 +4,8 @@ import React from "react";
 const Button = ({name, whenClick, colour,classNamePassed}) => (
     <button 
         onClick={ whenClick }
-        className={`${classNamePassed} myButton`}
         style={{ backgroundColor : `var(--${colour})`, }}
+        className={`${classNamePassed} myButton`}
         >{name}
     </button>
 );

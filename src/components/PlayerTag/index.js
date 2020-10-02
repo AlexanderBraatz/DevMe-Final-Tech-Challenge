@@ -2,7 +2,10 @@ import { connect } from "react-redux";
 import PlayerTag from "./PlayerTag"
 import {savePlayer, removePlayer, switchEddit} from "../../data/actions/state"
 
-const mapStatetoProps = (state,{player}) => ({player});
+const mapStatetoProps = ({allowPlayerDeletion},{player}) => ({
+    allowPlayerDeletion,
+    player,
+});
 
 const mapDispatchToProps = (dispatch) =>{
     return{

@@ -4,7 +4,7 @@ import initial from "./initial";
 
 const reducer = (state, action) => { 
 	switch(action.type){
-		case "START" : return startGame(setUpMatches(pickParticipantsAndWaiting(state)));
+		case "START" : return conditionalyStartGame(state);
 		case "SWITCH_MENUE" : return switchMenue(state);
 		case "SWITCH_EDDIT" : return switchEddit(state, action);
 		case "SAVE_PLAYER" : return savePlayer(state, action);
@@ -17,7 +17,14 @@ const reducer = (state, action) => {
 	}
 }
 
-
+const conditionalyStartGame = (state) => {
+	const {players} = state
+	return(
+		players.length === 0 
+		? {...state, sideBarView : true,}
+		: startGame(setUpMatches(pickParticipantsAndWaiting(state)))
+	)
+};
 
 const startGame = (state) => {
 
@@ -25,9 +32,11 @@ const startGame = (state) => {
 		...state,
 		startView: false,
 		matchView: true,
+		allowPlayerDeletion : false,
 
 	})
 }
+
 const switchMenue = (state) => {
 	
 	const {sideBarView} = state;

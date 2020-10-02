@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from '../Button'
 import ColourPicker from '../ColourPicker'
 
-const PlayerTag = ({player, save, remove, eddit}) => {
+const PlayerTag = ({player, save, remove, eddit, allowPlayerDeletion}) => {
 
     // const [collapsed, setCollapsed] = useState(true);
     const [name, setName] = useState("");
@@ -25,10 +25,17 @@ const PlayerTag = ({player, save, remove, eddit}) => {
         }
 
     }
+
     const handleDelete  = (e) => {
-        e.preventDefault();
-        remove(player.id);
+        if ( allowPlayerDeletion  ) {
+            e.preventDefault();
+            remove(player.id);
+        } else {
+            e.preventDefault();
+        }
+
     }
+
     const handleEddit = () => {
         eddit(player.id)
     }
@@ -88,8 +95,10 @@ const PlayerTag = ({player, save, remove, eddit}) => {
                             <Button 
                                 name="DELETE"
                                 whenClick={ handleDelete }
-                                colour="red" 
-                                classNamePassed="playerTag__button--delete"
+                                colour={allowPlayerDeletion 
+                                    ? "red" 
+                                    : "grey"} 
+                                classNamePassed= {"playerTag__button--delete"}
                             />
                         </div>
 

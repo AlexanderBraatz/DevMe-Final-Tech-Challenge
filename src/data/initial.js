@@ -43,6 +43,7 @@ const initial = {
 matches:[],
 participants : [] ,
 waiting:[],
+allowPlayerDeletion : true,
 
 
 startView : true,
